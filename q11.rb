@@ -1,3 +1,11 @@
+# //
+# // Man!! could not figure out a way to not mutant the variables in Ruby, method .map,
+# // .each,  and .capitalize all seems to mutate the original varibale
+# //
+# // So Did this in javascript in which i know the original varibale cannot be alterted!!!
+
+
+
 def titlize(a)
      p a
      words = a.split
