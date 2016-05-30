@@ -1,9 +1,9 @@
-# module HelperMethods
+module HelperMethods
 
   def titlize(a)
       words = a.split
       words.map! do |word|
-## the commented out line below will capitalize the first word even if they are the "in", "of", "and" and etc.        
+## the commented out line below will capitalize the first word even if they are the "in", "of", "and" and etc.
         # if words.index(word) != 0 && (word == "of" || word == "and" ||  word == "the" ||word == "in" || word == "from" ||word == "or")
         if (word == "of" || word == "and" ||  word == "the" ||word == "in" || word == "from" ||word == "or")
 
@@ -16,6 +16,6 @@
      words.join(" ")
 
   end
-# end
+end
 
 p titlize("in the summer of love or the from the heaven and hell in")
