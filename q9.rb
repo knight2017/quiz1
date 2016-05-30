@@ -1,7 +1,7 @@
-# require "help.rb"
+require "./help.rb"
 
 class Book
-  # include HelperMethods
+  include HelperMethods
   attr_accessor :title, :chapters
 
    def initialize()
@@ -13,10 +13,10 @@ class Book
    end
 
    def chapter
-     puts"Your book #{title} has #{chapters.length} chapters: "
+     puts"Your book #{titlize(title)} has #{chapters.length} chapters: "
 
      chapters.each do |x|
-     puts "#{chapters.index(x)+1}. #{x}"
+     puts "#{chapters.index(x)+1}. #{titlize(x)}"
      end
    end
 

@@ -1,4 +1,4 @@
-# module HelperMethods
+module HelperMethods
 
   def titlize(a)
       words = a.split
@@ -16,6 +16,6 @@
      words.join(" ")
 
   end
-# end
+end
 
 p titlize("in the summer of love or the from the heaven and hell in")

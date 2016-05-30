@@ -1,43 +1,45 @@
-# require "help.rb"
+require "./help.rb"
 
 module Blog
 end
 
 class Article
-  # include HelperMethods
+  include HelperMethods
   include Blog
-  attr_accessor :title, :bodys
+  attr_accessor :titles, :bodies
 
-  def initialize(title, bodys)
-     @title= title
-     @bodys = bodys
+  def initialize(titles, bodies)
+     @titles= titles
+     @bodies = bodies
   end
 end
 
 class Snippet < Article
   include Blog
-  # include HelperMethods
-  attr_accessor :title, :bodys
+  include HelperMethods
+  attr_accessor :titles, :bodies
 
   def initialize(*args)
       super(*args)
   end
 
   def title
-    puts  "#{titlize(title)}"
+    puts  "#{titlize(titles)}"
   end
 
   def body
-     if bodys.length > 100
-       puts "#{bodys[0..100]}"...""
+     if bodies.length > 100
+       puts "#{bodies[0..100]}"...""
      else
-       puts "#{bodys}"
+       puts "#{bodies}"
     end
   end
 end
 
-# 
-# a = "asdasdasdkalsakdljaldjkalasdasdasdkalsakdljaldjkaldjaksldasdasdasdasdasdasdajaklsdjaklsjasdasdasdkalsakdljaldjkaldjaksldasdasdasdasdasdasdajaklsdjaklsjasdasdasdkalsakdljaldjkaldjaksldasdasdasdasdasdasdajaklsdjaklsjdjaksldasdasdasdasdasdasdajaklsdjaklsjdaklhiasdaisduwkldjakdljasd"
-# b = "book"
-# tst = Snippet.new(b, a)
-# tst.body
+
+a = "asdasdasdkalsakdljaldjkalasdasdasdkalsakdljaldjkaldjaksldasdasdasdasdasdasdajaklsdjaklsjasdasdasdkalsakdljaldjkaldjaksldasdasdasdasdasdasdajaklsdjaklsjasdasdasdkalsakdljaldjkaldjaksldasdasdasdasdasdasdajaklsdjaklsjdjaksldasdasdasdasdasdasdajaklsdjaklsjdaklhiasdaisduwkldjakdljasd"
+b = "book of the book"
+tst = Snippet.new(b, a)
+# tst.titles = b
+tst.body
+tst.title
